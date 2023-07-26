@@ -19,7 +19,18 @@ scheme://host:port/path?query#fragment
  
  # Creating a Regex Pattern for Matching URLs
  
- Let's create a simple RegEx pattern to match URLs. Keep in mind that URL validation can be complex due to the various possible components and formatting. For this tutorial, we'll create a basic pattern that works for most common URLs.
+  Keep in mind that URL validation can be complex due to the various possible components and formatting. Let's create a simple RegEx pattern to match URLs! For this tutorial, we'll create a basic pattern that works for most common URLs.
+
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+^: Start of the string.
+(https?|ftp): Matches either "http", "https", or "ftp" as the scheme.
+://: Matches the "://" separator after the scheme.
+[^\s/$.?#]: Matches any character except whitespace, "/", ".", "?", and "#". This ensures that the host name is not empty and doesn't contain invalid characters.
+.: Matches a dot (.) after the host name.
+[^\s]*: Matches any characters after the dot (e.g., path and query) until a whitespace character or the end of the string is encountered.
+$: End of the string.
+
 
 ## Table of Contents
 
@@ -36,29 +47,28 @@ scheme://host:port/path?query#fragment
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+While this expression may seem a bit unorthodox upon initial inspection, let's break it down into individual elements in order to understand how the sequence functions.
 
 ### Anchors
+The two principal anchors in this regex expression are the ^ at the beginning and the $ at the end which constitute an string match with the components within the two anchors. When used alone, the ^ anchor matches a string that begins with the characters that follow the anchor. The $ matches a string that ends with the characters that precede it. 
 
 ### Quantifiers
+Define how many times a character or group of characters can occur. 
 
 ### OR Operator
+The main OR operator is the [] expression, that will match for any characters or character classes included in the brackets. 
 
 ### Character Classes
+Represented by square brackets [ ], character classes match any single character within the brackets. 
 
 ### Flags
+Flags are special identifiers that can be added to regex to give it a special functionality. 
 
 ### Grouping and Capturing
+Captured groups can specify what characters can be used between specific anchors such as parenthesis (). 
 
-### Bracket Expressions
-
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This regex tutorial was created by Valerie Elizabeth Guerra, a fellow software engineer and coder. Hope you enjoyed! 
+Github: Valliebby (https://github.com/Valliebb)
