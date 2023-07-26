@@ -6,9 +6,6 @@ Regular Expressions (RegEx) are powerful patterns used to match and manipulate t
 
  A URL (Uniform Resource Locator) is a reference to a web resource on the internet. It typically consists of several components:
 
-bash
-Copy code
-scheme://host:port/path?query#fragment
 
 - scheme: The protocol or scheme used to access the resource (e.g., "http", "https", "ftp").
 - host: The domain or IP address of the server hosting the resource.
@@ -22,14 +19,6 @@ scheme://host:port/path?query#fragment
   Keep in mind that URL validation can be complex due to the various possible components and formatting. Let's create a simple RegEx pattern to match URLs! For this tutorial, we'll create a basic pattern that works for most common URLs.
 
 /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
-
-^: Start of the string.
-(https?|ftp): Matches either "http", "https", or "ftp" as the scheme.
-://: Matches the "://" separator after the scheme.
-[^\s/$.?#]: Matches any character except whitespace, "/", ".", "?", and "#". This ensures that the host name is not empty and doesn't contain invalid characters.
-.: Matches a dot (.) after the host name.
-[^\s]*: Matches any characters after the dot (e.g., path and query) until a whitespace character or the end of the string is encountered.
-$: End of the string.
 
 
 ## Table of Contents
