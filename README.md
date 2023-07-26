@@ -1,10 +1,25 @@
 # RegEx URL Matching Tutorial
 
-Regular Expressions (RegEx) are powerful patterns used to match and manipulate text. In this tutorial, we will explore how to create a simple RegEx pattern for matching URLs.
+Regular Expressions (RegEx) are powerful patterns used to match and manipulate text. Regex uses a sequence of characters to define a specific search pattern. In this tutorial, we will explore how to create a simple RegEx pattern for matching URLs.
 
-## Summary
+# Understanding URLs
 
-Regex uses a sequence of characters to define a specific search pattern. A URL (Uniform Resource Locator) is a reference to a web resource on the internet. It typically consists of several components. Let's create a simple RegEx pattern to match URLs. Keep in mind that URL validation can be complex due to the various possible components and formatting. For this tutorial, we'll create a basic pattern that works for most common URLs.
+ A URL (Uniform Resource Locator) is a reference to a web resource on the internet. It typically consists of several components:
+
+bash
+Copy code
+scheme://host:port/path?query#fragment
+
+- scheme: The protocol or scheme used to access the resource (e.g., "http", "https", "ftp").
+- host: The domain or IP address of the server hosting the resource.
+- port (optional): The port number on which the server is listening (e.g., 80 for HTTP, 443 for HTTPS).
+- path: The specific path on the server that represents the resource.
+- query (optional): Parameters passed to the server in the form of key-value pairs (e.g., "?name=John&age=30").
+- fragment (optional): A specific section of the resource to display or link to
+ 
+ # Creating a Regex Pattern for Matching URLs
+ 
+ Let's create a simple RegEx pattern to match URLs. Keep in mind that URL validation can be complex due to the various possible components and formatting. For this tutorial, we'll create a basic pattern that works for most common URLs.
 
 ## Table of Contents
 
