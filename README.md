@@ -1,10 +1,10 @@
 # RegEx URL Matching Tutorial
 
-Introductory paragraph (replace this with your text)
+Regular Expressions (RegEx) are powerful patterns used to match and manipulate text. In this tutorial, we will explore how to create a simple RegEx pattern for matching URLs.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Regex uses a sequence of characters to define a specific search pattern. A URL (Uniform Resource Locator) is a reference to a web resource on the internet. It typically consists of several components. Let's create a simple RegEx pattern to match URLs. Keep in mind that URL validation can be complex due to the various possible components and formatting. For this tutorial, we'll create a basic pattern that works for most common URLs.
 
 ## Table of Contents
 
